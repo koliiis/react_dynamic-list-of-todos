@@ -7,9 +7,14 @@ type Props = {
   setModalStatus: (status: boolean) => void;
   selectedTodo: Todo | null;
   setSelectedTodo: (todo: Todo | null) => void;
-}
+};
 
-export const TodoList: React.FC<Props> = ({ todos, setModalStatus, selectedTodo, setSelectedTodo }) => (
+export const TodoList: React.FC<Props> = ({
+  todos,
+  setModalStatus,
+  selectedTodo,
+  setSelectedTodo,
+}) => (
   <table className="table is-narrow is-fullwidth">
     <thead>
       <tr>
@@ -58,8 +63,8 @@ export const TodoList: React.FC<Props> = ({ todos, setModalStatus, selectedTodo,
                 className="button"
                 type="button"
                 onClick={() => {
-                  setModalStatus(true); 
-                  setSelectedTodo(todo)
+                  setModalStatus(true);
+                  setSelectedTodo(todo);
                 }}
               >
                 <span className="icon">
@@ -73,7 +78,7 @@ export const TodoList: React.FC<Props> = ({ todos, setModalStatus, selectedTodo,
               </button>
             </td>
           </tr>
-        )
+        );
       })}
     </tbody>
   </table>
